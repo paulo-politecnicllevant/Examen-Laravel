@@ -15,11 +15,11 @@ class LlibreAutor extends Seeder
     public function run(): void
     {
         $llibre1 = Llibre::firstWhere('titol', 'El Quijote');
-        $autor1 = Autor::firstWhere('nom', 'Miguel de Cervantes');
+        $autor1 = Autor::firstWhere('name', 'Miguel de Cervantes');
         $llibre1->autors()->attach($autor1->id);
 
         $llibre2 = Llibre::firstWhere('titol', 'Moby Dick');
-        $autor2 = Autor::firstWhere('nom', 'Unamuno');
+        $autor2 = Autor::firstWhere('name', 'Unamuno');
         $llibre2->autors()->attach($autor2->id);
     }
 }
