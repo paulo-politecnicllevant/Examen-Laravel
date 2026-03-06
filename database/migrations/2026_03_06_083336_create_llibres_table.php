@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('llibres', function (Blueprint $table) {
             $table->id();
+            $table->string("titol");
             $table->timestamps();
         });
     }

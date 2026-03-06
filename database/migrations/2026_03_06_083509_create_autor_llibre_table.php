@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('autor_llibre', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('llibre_id')->constrained('llibres')->onDelete('cascade');
+            $table->foreignId('autor_id')->constrained('autors')->onDelete('cascade');
             $table->timestamps();
         });
     }
